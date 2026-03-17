@@ -1,0 +1,75 @@
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+
+  .backBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover { background: rgba(255, 255, 255, 0.2); }
+  }
+
+  h1 { font-size: 1.8rem; font-weight: 700; }
+}
+
+.tableWrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th {
+    text-align: left;
+    padding: 1rem;
+    color: #a5a6f6;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+  }
+}
+
+.tagIn { color: #4ade80; font-weight: bold; }
+.tagOut { color: #94a3b8; font-weight: normal; }
+.msg { text-align: center; padding: 3rem; color: #94a3b8; }
+
+.exportBtn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 18px;
+  background: #facc15; // Amarillo de tu prototipo
+  color: #000;
+  border: none;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(250, 204, 21, 0.2); }
+}

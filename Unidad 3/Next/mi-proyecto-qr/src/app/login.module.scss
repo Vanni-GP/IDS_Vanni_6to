@@ -1,0 +1,176 @@
+// src/app/login-reg.module.scss
+@use './variables' as *; // Importamos las variables que definimos al inicio
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: $bg-dark;
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.1) 0px, transparent 50%), 
+    radial-gradient(at 90% 80%, rgba(168, 85, 247, 0.1) 0px, transparent 50%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: $primary;
+  filter: blur(150px);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid $border-glass;
+  padding: 3rem;
+  border-radius: 32px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* === ESTILOS DEL LOGO === */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, $primary, $secondary);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.logoText {
+  font-size: 1.8rem;
+  color: $text-main;
+  letter-spacing: -0.5px;
+}
+
+.logoBold {
+  font-weight: 700;
+  color: $primary; // O puedes usar el degradado aquí también
+}
+
+/* === TÍTULOS === */
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: $text-main;
+  background: linear-gradient(to right, #ffffff, #c7d2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: $text-muted;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* === ESTILOS DE LAS PESTAÑAS (TABS) === */
+.tabs {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 5px;
+  margin-bottom: 2rem;
+  border: 1px solid $border-glass;
+
+  button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    color: $text-muted;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover { color: white; }
+  }
+
+  .activeTab {
+    background: $primary;
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  }
+}
+
+/* === FORMULARIO E INPUTS === */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input, .select {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid $border-glass;
+    padding: 16px;
+    border-radius: 14px;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+  }
+
+  .select {
+    appearance: none; // Quita la flecha por defecto
+    color: $text-muted;
+    option { background: $bg-dark; color: white; }
+  }
+
+  .submitBtn {
+    background: linear-gradient(45deg, $primary, $secondary);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(168, 85, 247, 0.4);
+    }
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  color: $text-muted;
+  font-size: 0.9rem;
+  a { color: $text-muted; text-decoration: none; &:hover { color: $primary; } }
+}

@@ -1,0 +1,16 @@
+/* Borra todo lo que haya y pega esto */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  /* CAMBIAMOS height POR min-height */
+  min-height: 100%; 
+  background-color: #0f172a; /* Fondo azul muy oscuro */
+  color: white;
+  /* Quitamos el overflow-x hidden para evitar problemas en cel */
+}

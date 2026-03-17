@@ -1,0 +1,16 @@
+// Button.module.scss
+.customButton {
+  background: linear-gradient(45deg, #4f46e5, #9333ea);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
